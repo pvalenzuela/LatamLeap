@@ -1,0 +1,139 @@
+/*------------------------------
+=BASIC SETUP
+------------------------------*/
+
+/* Makeshift CSS Reset */
+* {
+	margin: 100;
+	padding: 0;
+}
+
+/* Tell the browser to render HTML 5 elements as block */
+header, footer, section, aside, nav, article {
+	display: block;
+}
+
+body {
+	margin: 0 auto;
+	padding: 22px 0;
+	width: 800px; 
+	font: 13px/22px Helvetica, Arial, sans-serif;
+	background: #dedcd9;
+}
+
+h1, h2 {
+	font-size: 28px;
+	line-height: 44px;
+	padding: 22px 0;
+}
+
+h3 {
+	font-size: 18px;
+	line-height: 22px;
+	padding: 11px 0;
+}
+
+p {
+	padding-bottom: 22px;
+}
+
+
+
+/*------------------------------
+=HEADER
+------------------------------*/
+
+header {
+    width: 100%;  
+    height: 90px;
+    background: #000066; 
+}
+  
+
+header logo {
+  float: left;
+  width: 280px;
+  margin: 00px 0 0 0px;
+}  
+
+header aside {
+    float: right;
+    display: table;
+}
+
+header aside social { 
+    display: table-row; 
+}  
+
+header aside social ul {
+  display: table-cell;
+  list-style: none;
+  margin: 20px 10px 0px 10px;
+  float: right;
+}
+
+header aside social ul li {
+  float: left;
+  margin-left: 10px;
+}
+
+header aside nav { 
+    display: table-row; 
+}  
+
+header aside nav ul {
+  display: table-cell;
+  list-style: none;
+  margin: 0px 10px 0px 10px;
+  float: right;
+}
+
+header aside nav ul li {
+  float: left;
+  margin-left: 10px;
+}
+
+header aside nav ul li a {
+  color: #e7e7e7;
+  display: block;
+  padding: 10px 10px 10px 10px;
+  position: relative;
+  text-decoration: none;
+}
+
+/*------------------------------
+=CONTENT
+------------------------------*/
+
+content {
+    width: 100%;  
+    display: table;
+}
+  
+
+content main {   
+    background: #FFFFFF; 
+    padding: 10px 10px 10px 10px;
+    display: table-cell;
+    width: 100%; 
+}
+
+
+content sidebar {
+    float: right;
+    background: #FFFFFF; 
+    display: table-cell;
+    margin: 0px 0px 0px 10px;
+    width: 200px; 
+}
+
+footer {
+    background: #3E3742;
+    padding: 10px 0px;
+    text-align: center;
+    color: #e7e7e7;
+    position: relative;
+    left: 0;
+    width: 100%;
+    margin: 10px 0px 0px 0px;
+}

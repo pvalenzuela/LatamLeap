@@ -1,0 +1,26 @@
+<div class="span9">
+  <h2>Welcome to LatamLeap</h2>
+  
+  <p><strong>We are a platform connecting Latin American technology
+      startups with Angel and Venture Capital investors around the
+      world.</strong></p>
+  
+  <p>If you are a Latin American technology startup looking to raise
+    capital, we invite you to <%= link_to "Join Us", "/users/sign_up" %></p>
+  
+  <p>If you are an angel investor or venture capital firm interested in
+    emerging technologies and innovation in Latin America, we invite you
+    to <a href="/user/register">join us</a></p>
+</div>
+<div class="span3">
+  <div class="well sidebar-nav" id="my-news">
+    <h3>News</h3>
+    <dl>
+  <!--    <li class="nav-header">Sidebar</li> -->
+  <% @news_items.each do |new|  %>
+  <dt><%= new.title %></dt>
+  <dd><%= new.content[0,50] %>... <%= link_to("read more",news_item_path(new))%></dd>
+  <% end %>
+    </dl>
+  </div><!--/.well -->
+</div><!--/span-->

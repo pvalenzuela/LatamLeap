@@ -1,0 +1,50 @@
+#header {
+	margin-bottom: 10px;
+}
+
+#header #nav-header {
+	background: #000066;
+	height: 95px;
+}
+
+#social {
+	padding: 10px;
+	text-align: right;
+}
+
+#social ul {
+	padding: 0;
+	list-style: none;
+}
+
+#social ul li {
+	display: inline;
+	padding: 10px 10px 10px 10px;
+}
+
+#navigation {
+	padding: 5px;
+	text-align: right;
+}
+
+#navigation ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#navigation ul li {
+	display: inline;
+	padding: 0px 10px 0px 10px;
+}
+
+#navigation ul li a, #navigation ul li a:active, #navigation ul li a:visited {
+	color: #eee;
+	text-decoration: none;
+}
+
+#navigation ul li a:hover {
+	color: #FFFFFF;
+	text-decoration: none;
+	border-bottom: 3px solid #fff;
+}

@@ -1,0 +1,26 @@
+<% unless flash[:notice].blank? %>
+<div class="alert">
+	<a class="close" data-dismiss="alert">×</a>
+	<%= flash[:notice] %>
+</div>
+<% end %>
+<% unless flash[:alert].blank? %>
+<div class="alert alert-error">
+	<a class="close" data-dismiss="alert">×</a>
+	<%= flash[:alert] %>
+</div>
+<% end %>
+<% unless flash[:error].blank? %>
+<div class="alert alert-error">
+	<a class="close" data-dismiss="alert">×</a>
+	<b><%= flash[:error] %></b>
+<% end %>
+</div>
+
+<% unless flash[:success].blank? %>
+<div class="alert alert-success">
+	<a class="close" data-dismiss="alert">×</a>
+	<%= flash[:success] %>
+</div>
+
+<% end %>

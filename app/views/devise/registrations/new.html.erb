@@ -1,0 +1,88 @@
+<div class="row">
+	<div class="span12">
+		<h1>Join LatamLeap</h1>
+	</div>
+</div>
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => 'form-horizontal'}) do |f| %>
+<%= devise_error_messages! %>
+
+<fieldset>
+	<div class="row">
+		<div class="span4 offset2">
+			<div class="control-group">
+				<%= f.label :email, :class => 'control-label' %>
+				<div class="controls">
+					<%= f.email_field :email %>
+				</div>
+			</div>
+			<div class="control-group">
+				<%= f.label :password, :class => 'control-label' %>
+				<div class="controls">
+					<%= f.password_field :password %>
+				</div>
+				<%= f.label :password_confirmation, :class => 'control-label' %>
+				<div class="controls">
+					<%= f.password_field :password_confirmation %>
+				</div>
+			</div>
+
+			<div class="control-group">
+				<%= f.label :name, "Name:", :class => 'control-label' %>
+				<div class="controls">
+					<%= f.text_field :name %>
+				</div>
+			</div>
+
+			<div class="control-group">
+				<%= f.label :company_name, "Company's Name:", :class => 'control-label' %>
+				<div class="controls">
+					<%= f.text_field :company_name %>
+				</div>
+			</div>
+
+			<div class="control-group">
+				<%= f.label :position, "Position int the Company:", :class => 'control-label' %>
+				<div class="controls">
+					<%= f.text_field :position %>
+				</div>
+			</div>
+
+		</div>
+		<div class="span4">
+
+			<div class="control-group">
+				<%= f.label :location, "Company's Location:", :class => 'control-label' %>
+				<div class="controls">
+					<%= f.text_field :location %>
+				</div>
+			</div>
+
+			<div class="control-group">
+				<%= f.label :user_focus_ids_, "Company's Focus", :class => 'control-label' %>
+				<% for focus in Focus.find(:all) %>
+				<div class="controls">
+
+					<%= check_box_tag "user[focus_ids][]", focus.id, @user.focuses.include?(focus) %>
+					<%= focus.name %>
+				</div>
+				<% end %>
+			</div>
+
+			<div class="control-group">
+				<%= f.label :stage, "Company's Stage:", :class => 'control-label' %>
+				<div class="controls">
+					<%= collection_select(:stage_id, :id, Stage.all, :id, :name) %>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div class="row">
+		<div class="form-actions span2 offset5">
+			<%= f.submit "Join", :class => "btn btn-primary" %>
+		</div>
+	</div>
+
+</fieldset>
+</div>
+<% end %>

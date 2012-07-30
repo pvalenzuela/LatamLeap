@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: Noticia 1
+  author: MyString
+  content: MyText
+  abstract: MyText
+
+two:
+  title: Noticia 2
+  author: MyString
+  content: MyText
+  abstract: MyText

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: 'focus 1'
+  description: MyText
+
+two:
+  name: 'focus 2'
+  description: MyText
+
+three:
+  name: 'focus 3'
+  description: MyText
+
+four:
+  name: 'focus 4'
+  description: MyText
