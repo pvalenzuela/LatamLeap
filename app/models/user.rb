@@ -12,4 +12,6 @@ class User < ActiveRecord::Base
   has_and_belongs_to_many :focuses, :class_name => "Focus"
   belongs_to :stage
 
+  validates_presence_of :name, :company_name, :position, :location
+
 end
