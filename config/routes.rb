@@ -1,5 +1,5 @@
 LatamLeap::Application.routes.draw do
-  devise_for :users
+  devise_for :users, :controllers => {:passwords => "users/passwords"}
 
   resources :news_items
 
@@ -65,4 +65,5 @@ LatamLeap::Application.routes.draw do
   resources :news_items 
   
   match '/about' => 'home#about'
+    
 end
