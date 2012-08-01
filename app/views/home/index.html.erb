@@ -19,7 +19,7 @@
   <!--    <li class="nav-header">Sidebar</li> -->
   <% @news_items.each do |new|  %>
   <dt><%= new.title %></dt>
-  <dd><%= new.content[0,50] %>... <%= link_to("read more",news_item_path(new))%></dd>
+  <dd><%= new.content[0,50].html_safe %>... <%= link_to("read more",news_item_path(new))%></dd>
   <% end %>
     </dl>
   </div><!--/.well -->

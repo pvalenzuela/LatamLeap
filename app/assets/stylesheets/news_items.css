@@ -1,0 +1,11 @@
+// Place all the styles related to the NewsItems controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#news-image {
+  float:left; 
+  padding-top:5px; 
+  padding-right:5px; 
+  padding-left:5px;
+  padding-bottom:0px;
+}

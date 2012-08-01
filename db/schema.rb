@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120727143808) do
+ActiveRecord::Schema.define(:version => 20120801124715) do
 
   create_table "focuses", :force => true do |t|
     t.string   "name"
@@ -30,8 +30,12 @@ ActiveRecord::Schema.define(:version => 20120727143808) do
     t.string   "author"
     t.text     "content"
     t.text     "abstract"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "stages", :force => true do |t|

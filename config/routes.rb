@@ -1,5 +1,5 @@
 LatamLeap::Application.routes.draw do
-  devise_for :users, :controllers => {:passwords => "users/passwords"}
+  devise_for :users, :controllers => {:passwords => "users/passwords", :confirmations => "users/confirmations"}
 
   resources :news_items
 
