@@ -1,5 +1,12 @@
 LatamLeap::Application.routes.draw do
-  devise_for :users, :controllers => {:passwords => "users/passwords", :confirmations => "users/confirmations"}
+  devise_for :users, :controllers => {:passwords => "users/passwords", :confirmations => "users/confirmations"}, :skip => [ :passwords, :confirmations ]
+  as :user do
+    post 'users/password' => 'users/passwords#create', :as => 'user_password'
+    put 'users/password' => 'users/passwords#update'
+    get 'users/password/edit' => 'users/passwords#edit', :as => 'edit_user_password'
+    post 'users/confirmation' => 'users/confirmations#create', :as => 'user_confirmation'
+    get 'users/confirmation' => 'users/confirmations#show', :as => 'show_user_confirmation'
+  end
 
   resources :news_items
 
@@ -55,15 +62,15 @@ LatamLeap::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   root :to => 'home#index'
-  
+
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
-  
-  resources :news_items 
-  
+
+  resources :news_items
+
   match '/about' => 'home#about'
-    
+
 end

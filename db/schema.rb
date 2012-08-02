@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120801124715) do
+ActiveRecord::Schema.define(:version => 20120727143808) do
 
   create_table "focuses", :force => true do |t|
     t.string   "name"
@@ -30,15 +30,18 @@ ActiveRecord::Schema.define(:version => 20120801124715) do
     t.string   "author"
     t.text     "content"
     t.text     "abstract"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "stages", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "user_roles", :force => true do |t|
     t.string   "name"
     t.text     "description"
     t.datetime "created_at",  :null => false
@@ -73,8 +76,12 @@ ActiveRecord::Schema.define(:version => 20120801124715) do
     t.integer  "stage_id"
     t.integer  "revenues"
     t.text     "team"
-    t.text     "role"
+    t.integer  "role_id"
     t.text     "status"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   add_index "users", ["authentication_token"], :name => "index_users_on_authentication_token", :unique => true
